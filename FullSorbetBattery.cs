@@ -1,15 +1,26 @@
 ﻿using System.Collections;
 using System.Linq;
-using BepInEx;
-using BepInEx.Configuration;
+using MSCLoader;
 using HutongGames.PlayMaker;
 using UnityEngine;
 
-[BepInPlugin("de.schplorg.fullsorbetbattery", "Full Sorbet Battery", "0.0.1")]
-public class FullSorbetBattery : BaseUnityPlugin
+public class FullSorbetBattery : Mod
 {
+	public override string ID => "FullSorbetBattery";
+
+	public override string Name => "FullSorbetBattery";
+
+	public override string Author => "schplorg";
+
+	public override string Version => "0.0.2";
+
+	public override string Description => "Makes the Sorbet battery never go empty";
+
+	public override Game SupportedGames => Game.MyWinterCar;
+    
     private void Awake()
     {
+		ModConsole.Log("FullSorbetBattery loaded!");
     }
 
     private void Update()
