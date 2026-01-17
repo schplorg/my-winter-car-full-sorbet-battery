@@ -9,5 +9,5 @@ $refs = @(
     "C:\Program Files (x86)\Steam\steamapps\common\My Winter Car\mywintercar_Data\Managed\UnityEngine.dll"
 )
 $refArgs = $refs | ForEach-Object { "-r:`"$_`"" }
-mcs -sdk:2 -target:library -out:dist/FullSorbetBattery.dll $refArgs -unsafe -langversion:6 *.cs
+mcs -sdk:2 -target:library -out:dist/FullSorbetBattery.dll $refArgs -unsafe *.cs
 cp ".\dist\FullSorbetBattery.dll" "C:\Program Files (x86)\Steam\steamapps\common\My Winter Car\Mods\"
