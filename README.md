@@ -4,14 +4,13 @@ Makes starter car always starteable
 
 ## Compatibility
 - **Game**: My Winter Car
-- **Requires**: BepInEx 5, .NET Framework 4.8
+- **Requires**: MSCLoader, Mono
 
 ## Build instructions (Windows)
 
 Install chocolatey https://chocolatey.org
 
 ```
-choco install netfx-4.8-devpack
-choco install visualstudio2022buildtools
+choco install mono -y
 .\build.ps1
 ```
